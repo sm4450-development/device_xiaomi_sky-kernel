@@ -14,6 +14,7 @@ SRC_ROOT="${MY_DIR}/../../.."
 TMP_DIR=$(mktemp -d)
 EXTRACT_KERNEL=true
 declare -a MODULE_FOLDERS=("vendor_ramdisk" "vendor_dlkm" "system_dlkm")
+DTB_PATTERN="Qualcomm_Technologies,_Inc._Ravelin_SoC"
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
@@ -65,10 +66,14 @@ curl -sSL "https://raw.githubusercontent.com/PabloCastellano/extract-dtb/master/
 
 # Copy
 python3 "${TMP_DIR}/extract_dtb.py" "${TMP_DIR}/vendor_boot.out/dtb" -o "${TMP_DIR}/dtbs" > /dev/null
-find "${TMP_DIR}/dtbs" -type f -name "*.dtb" \
-    -exec cp {} "${MY_DIR}/dtbs" \; \
-    -exec printf "  - dtbs/" \; \
-    -exec basename {} \;
+DTB_PATH="$(find "${TMP_DIR}/dtbs" -type f -name "*${DTB_PATTERN}*.dtb" -print -quit)"
+if [ -z "${DTB_PATH}" ]; then
+    echo "Unable to find dtb!"
+    exit 1
+fi
+cp "${DTB_PATH}" "${MY_DIR}/dtbs"
+echo "  - dtbs/$(basename ${DTB_PATH})"
+
 cp -f "${DUMP}/dtbo.img" "${MY_DIR}/dtbs/dtbo.img"
 echo "  - dtbs/dtbo.img"
 
