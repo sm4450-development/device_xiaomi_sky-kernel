@@ -89,7 +89,7 @@ rdbg.ko
 qcom_iommu_debug.ko
 msm_kgsl.ko
 zram.ko
-hdcp_qseecom.ko
+hdcp.ko
 qseecom-mod.ko
 ktd3136_bl.ko
 ocp2131_bias.ko
