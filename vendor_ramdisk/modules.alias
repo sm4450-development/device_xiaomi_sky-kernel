@@ -457,6 +457,8 @@ alias of:N*T*Cqcom,pm8450-gpio pinctrl_spmi_gpio
 alias of:N*T*Cqcom,pm8450-gpioC* pinctrl_spmi_gpio
 alias of:N*T*Cqcom,pm7325-gpio pinctrl_spmi_gpio
 alias of:N*T*Cqcom,pm7325-gpioC* pinctrl_spmi_gpio
+alias of:N*T*Cqcom,pm7325b-gpio pinctrl_spmi_gpio
+alias of:N*T*Cqcom,pm7325b-gpioC* pinctrl_spmi_gpio
 alias of:N*T*Cqcom,pm6450-gpio pinctrl_spmi_gpio
 alias of:N*T*Cqcom,pm6450-gpioC* pinctrl_spmi_gpio
 alias of:N*T*Cqcom,pm8550-gpio pinctrl_spmi_gpio
@@ -579,6 +581,8 @@ alias usb:v0424p7800d*dc*dsc*dp*ic*isc*ip*in* lan78xx
 alias usb:v0424p7850d*dc*dsc*dp*ic*isc*ip*in* lan78xx
 alias usb:v0424p7801d*dc*dsc*dp*ic*isc*ip*in* lan78xx
 alias usb:v07C9p0012d*dc*dsc*dp*ic*isc*ip*in* lan78xx
+alias of:N*T*Cqcom,spmi-sdam nvmem_qcom_spmi_sdam
+alias of:N*T*Cqcom,spmi-sdamC* nvmem_qcom_spmi_sdam
 alias of:N*T*Cqcom,parrot-pinctrl pinctrl_parrot
 alias of:N*T*Cqcom,parrot-pinctrlC* pinctrl_parrot
 alias of:N*T*Cqcom,parrot-vm-pinctrl pinctrl_parrot

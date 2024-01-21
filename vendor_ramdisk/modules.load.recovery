@@ -181,7 +181,7 @@ rdbg.ko
 qcom_iommu_debug.ko
 msm_kgsl.ko
 zram.ko
-hdcp_qseecom.ko
+hdcp.ko
 qseecom-mod.ko
 ktd3136_bl.ko
 ocp2131_bias.ko
@@ -267,6 +267,7 @@ shared_rail_vendor.ko
 tz_log.ko
 qce50.ko
 qcedev-mod.ko
+binder_prio.ko
 ipa_fmwk.ko
 usb_bam.ko
 sps_drv.ko
